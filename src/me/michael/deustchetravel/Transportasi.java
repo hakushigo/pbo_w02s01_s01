@@ -5,6 +5,11 @@ public class Transportasi {
     int UmurTransportasi;
     float BeratTransportasi, LiterBahanBakar, RateKMBahanBakar, KecepatanTransportasi;
 
+    public enum MODE_AKSELERASI{
+        PERCEPAT,
+        PERLAMBAT
+    }
+
     public Transportasi(
             String NamaTransportasi,
             String IDTransportasi,
@@ -53,6 +58,31 @@ public class Transportasi {
         this.KecepatanTransportasi = 0;
     }
 
+    public float HitungWaktuKalkulasi(float Distance){
+        return Distance/this.KecepatanTransportasi;
+    }
+
+    public void GantiKecepatanTransportasi(Transportasi.MODE_AKSELERASI mode, float delta){
+        switch(mode){
+            case PERCEPAT -> {
+                this.KecepatanTransportasi += delta;
+            }
+            case PERLAMBAT -> {
+                this.KecepatanTransportasi -= delta;
+            }
+            default -> {
+                System.err.println("THE MODE_AKSELERASI ENUM SHOULD BE EITHER PERCEPAT OR PERLAMBAT");
+            }
+        }
+    }
+
+    public void Berhenti(){
+        this.KecepatanTransportasi = 0;
+    }
+
+    public void MulaiBerjalan(float KecepatanAwal){
+        GantiKecepatanTransportasi(Transportasi.MODE_AKSELERASI.PERCEPAT, KecepatanAwal);
+    }
 
     /**
      * TODO: Create more function about the transportation ability.

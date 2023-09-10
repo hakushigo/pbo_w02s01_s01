@@ -3,9 +3,11 @@
 * Pelanggan
 * Tiket
 * Transportasi
+* Hotel
+* DestinasiWisata
 
 ### Kelas lain
 * main (**tempat main function dari projek java ini.**)
 
 ### Miscs.
-This class using IntelliJ Build system
+This class using IntelliJ Build system          
