@@ -27,7 +27,8 @@ public class Pelanggan {
             boolean Pelanggan_VIP,
             Pelanggan[] PelangganLainBersama,
             float BeratBadan,
-            float Tinggi
+            float Tinggi,
+            Transportasi TransportPelanggan
     ){
         this.TiketPelanggan = TiketPelanggan;
 
@@ -41,6 +42,7 @@ public class Pelanggan {
         this.PelangganLainBersama = new ArrayList<Pelanggan>();
         this.BeratBadan = BeratBadan;
         this.Tinggi = Tinggi;
+        this.TranspotPelanggan = TransportPelanggan;
 
 
         // synchronized

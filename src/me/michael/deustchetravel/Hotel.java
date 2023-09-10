@@ -27,6 +27,8 @@ public class Hotel {
         this.KapasitasTotal = KapasitasTotal;
         this.JumlahTamu = 0;
         this.JumlahKaryawanHotel = JumlahKaryawan;
+
+        this.PenghuniHotel = new ArrayList<Pelanggan>();
     }
 
     public void PelangganHotelCheckIn(Pelanggan PelangganMasuk)

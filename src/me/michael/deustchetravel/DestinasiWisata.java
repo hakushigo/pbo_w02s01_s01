@@ -8,16 +8,16 @@ public class DestinasiWisata {
     public Integer Jumlah_Pengunjung, Kapasitas_Pengunjung;
     ArrayList<Pelanggan> Pelanggan_Yang_Berkunjung;
 
-    public void DestinasiWisata(
-        String Nama,
-        String Kab,
-        String Prov,
-        String Management,
-        String Deskripsi,
-        String Tipe,
-        float Harga_Tiket_Masuk,
-        Integer nPengunjung,
-        Integer nMaxPengunjung
+    public DestinasiWisata(
+            String Nama,
+            String Kab,
+            String Prov,
+            String Management,
+            String Deskripsi,
+            String Tipe,
+            float Harga_Tiket_Masuk,
+            Integer nPengunjung,
+            Integer nMaxPengunjung
     )
     {
         this.Nama_Destinasi_Wisata = Nama;
@@ -29,7 +29,9 @@ public class DestinasiWisata {
         this.Harga_Tiket_Masuk = Harga_Tiket_Masuk;
         this.Kapasitas_Pengunjung = nMaxPengunjung;
 
-        if(this.Jumlah_Pengunjung < this.Kapasitas_Pengunjung)
+        this.Pelanggan_Yang_Berkunjung = new ArrayList<>();
+
+        if(nPengunjung < this.Kapasitas_Pengunjung)
             this.Jumlah_Pengunjung = nPengunjung;
     }
 
